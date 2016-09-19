@@ -67,8 +67,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt32.setOnClickListener(this);
         bt33.setOnClickListener(this);
 
-        Pessoa pessoa = new Pessoa("Luciano Alves");
-        pessoa.save();
     }
 
     public String Ganhou(int Njogadas){
