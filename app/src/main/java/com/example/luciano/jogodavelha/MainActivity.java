@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity{
 
     private Button bt11;
     private Button bt12;
@@ -54,81 +54,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Jogador = (TextView) findViewById(R.id.txtJogador);
         Jogador.setText(Jogador1);
-        Jogador.setTextColor(getResources().getColor(R.color.colorPrimary));
         Ganhador = (TextView) findViewById(R.id.txtGanhador);
 
-        bt11.setOnClickListener(this);
-        bt12.setOnClickListener(this);
-        bt13.setOnClickListener(this);
-        bt21.setOnClickListener(this);
-        bt22.setOnClickListener(this);
-        bt23.setOnClickListener(this);
-        bt31.setOnClickListener(this);
-        bt32.setOnClickListener(this);
-        bt33.setOnClickListener(this);
-
+        bt11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bt11.setText("X");
+                JogoDaVelha.tabuleiro[0][0] = "X";
+            }
+        });
         Pessoa pessoa = new Pessoa("Luciano Alves");
         pessoa.save();
     }
 
-    public String Ganhou(int Njogadas){
 
 
-        String Vencedor = "";
-        if(Njogadas == 9){
-            Vencedor = "#Deu Velha#";
-        }
-
-        List<String> Jogadas = new ArrayList<>();
-        Jogadas.add(bt11.getText().toString() + bt12.getText().toString() + bt13.getText().toString());
-        Jogadas.add(bt21.getText().toString() + bt22.getText().toString() + bt23.getText().toString());
-        Jogadas.add(bt31.getText().toString() + bt32.getText().toString() + bt33.getText().toString());
-        Jogadas.add(bt11.getText().toString() + bt21.getText().toString() + bt31.getText().toString());
-        Jogadas.add(bt12.getText().toString() + bt22.getText().toString() + bt32.getText().toString());
-        Jogadas.add(bt13.getText().toString() + bt23.getText().toString() + bt33.getText().toString());
-        Jogadas.add(bt11.getText().toString() + bt22.getText().toString() + bt33.getText().toString());
-        Jogadas.add(bt13.getText().toString() + bt22.getText().toString() + bt31.getText().toString());
-
-
-        for(int i=0; i < Jogadas.size(); i++){
-            if(Jogadas.get(i).equals("XXX")){
-                Vencedor = "Jogador X Venceu";
-            }else if(Jogadas.get(i).equals("OOO")){
-                Vencedor = "Jogador O Venceu";
-            }
-        }
-        return Vencedor;
-    }
-
-    @Override
-    public void onClick(View view) {
-            jogadas++;
-        if(Jogador.getText().equals("Jogador 1")) {
-            if(((Button) view).getText().equals("X") || ((Button) view).getText().equals("O")){}else {
-                ((Button) view).setText("X");
-                Ganhador.setText(jogoDaVelha.VerificarVencedor(jogadas));
-                Jogador.setText(Jogador2);
-                Jogador.setTextColor(getResources().getColor(R.color.colorAccent));
-
-            }
-        }else if(Jogador.getText().equals("Jogador 2")){
-            if(((Button) view).getText().equals("X") || ((Button) view).getText().equals("O")){}else {
-                ((Button) view).setText("O");
-                ((Button) view).setTextColor(getResources().getColor(R.color.colorAccent));
-                Ganhador.setText(jogoDaVelha.VerificarVencedor(jogadas));
-                Jogador.setText(Jogador1);
-                JogoDaVelha.tabuleiro[0][0] = "X";
-                Jogador.setTextColor(getResources().getColor(R.color.colorPrimary));
-
-            }
-        }
-        if(Ganhador.getText().equals("Jogador X Venceu") || Ganhador.getText().equals("Jogador O Venceu") || Ganhador.getText().equals("#Deu Velha#")){
-
-            Intent it = new Intent(this, Ganhador.class);
-            it.putExtra("Vencedor", Ganhador.getText().toString());
-            startActivity(it);
-
-        }
-
-    }
 }
