@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">JogoDaVelha</string>
+    <string name="Titulo_Ganhador">Resultado</string>
+    <string name="Titulo_Jogo">Jogo da Velha</string>
+    <string name="Iniciar_Jogo">Jogar</string>
+    <string name="Pontuacao">Pontuação</string>
+    <string name="Pontuacao_Jodador1">Jogador1 : </string>
+    <string name="Pontuacao_Jodador2">Jogador2 : </string>
+
+</resources>
