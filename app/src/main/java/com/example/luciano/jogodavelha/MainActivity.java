@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(Jogador.getText().equals("Jogador 1")) {
             if(((Button) view).getText().equals("X") || ((Button) view).getText().equals("O")){}else {
                 ((Button) view).setText("X");
-                Ganhador.setText(jogoDaVelha.VerificarVencedor(jogadas));
+                Ganhador.setText(Ganhou(jogadas));
                 Jogador.setText(Jogador2);
                 Jogador.setTextColor(getResources().getColor(R.color.colorAccent));
 
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(((Button) view).getText().equals("X") || ((Button) view).getText().equals("O")){}else {
                 ((Button) view).setText("O");
                 ((Button) view).setTextColor(getResources().getColor(R.color.colorAccent));
-                Ganhador.setText(jogoDaVelha.VerificarVencedor(jogadas));
+                Ganhador.setText(Ganhou(jogadas));
                 Jogador.setText(Jogador1);
                 Jogador.setTextColor(getResources().getColor(R.color.colorPrimary));
 
