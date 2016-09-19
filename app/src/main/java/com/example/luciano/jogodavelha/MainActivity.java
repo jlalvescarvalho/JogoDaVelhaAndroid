@@ -117,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 ((Button) view).setTextColor(getResources().getColor(R.color.colorAccent));
                 Ganhador.setText(jogoDaVelha.VerificarVencedor(jogadas));
                 Jogador.setText(Jogador1);
+                JogoDaVelha.tabuleiro[0][0] = "X";
                 Jogador.setTextColor(getResources().getColor(R.color.colorPrimary));
 
             }
