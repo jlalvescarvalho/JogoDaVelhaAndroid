@@ -8,10 +8,18 @@ import java.util.List;
  */
 public class JogoDaVelha {
 
-    static String[][] tabuleiro = new String[3][3];
+    private  String[][] tabuleiro = new String[3][3];
+    private String Jogador = " ";
+    private int Jogadas = 0;
 
-    public void realizarJogada(int posicao){
-        
+
+    public void realizarJogada(int p1, int p2){
+        if(Jogadas == 0){
+            tabuleiro[p1][p2] = "X";
+            Jogador = "O";
+        }else if(Jogador.equals("X")){
+            tabuleiro[p1][p2] = "X";
+        }
     }
 
     public String VerificarVencedor(int Jogadas){
