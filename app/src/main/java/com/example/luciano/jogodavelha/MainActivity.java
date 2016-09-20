@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity{
 
     private Button bt11;
     private Button bt12;
@@ -56,11 +56,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Jogador.setText(Jogador1);
         Ganhador = (TextView) findViewById(R.id.txtGanhador);
 
+
+        bt11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
 
-    @Override
-    public void onClick(View view) {
-        
-    }
 }

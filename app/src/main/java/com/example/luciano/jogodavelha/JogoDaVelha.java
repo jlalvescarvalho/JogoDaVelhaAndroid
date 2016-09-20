@@ -10,6 +10,9 @@ public class JogoDaVelha {
 
     static String[][] tabuleiro = new String[3][3];
 
+    public void realizarJogada(int posicao){
+        
+    }
 
     public String VerificarVencedor(int Jogadas){
 
