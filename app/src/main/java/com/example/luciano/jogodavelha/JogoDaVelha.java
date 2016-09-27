@@ -13,16 +13,25 @@ public class JogoDaVelha {
     private int Jogadas = 0;
 
 
-    public void realizarJogada(int p1, int p2){
+    public String realizarJogada(int p1, int p2){
         if(Jogadas == 0){
             tabuleiro[p1][p2] = "X";
             Jogador = "O";
+            return "X";
         }else if(Jogador.equals("X")){
             tabuleiro[p1][p2] = "X";
+            Jogador = "O";
+            return "X";
+        }else if(Jogador.equals("O")){
+            tabuleiro[p1][p2] = "O";
+            Jogador = "X";
+            return "O";
         }
+        Jogadas++;
+        return "#";
     }
 
-    public String VerificarVencedor(int Jogadas){
+    public String VerificarVencedor(){
 
         String Vencedor = "";
         if(Jogadas == 9){
