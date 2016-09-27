@@ -60,7 +60,10 @@ public class MainActivity extends AppCompatActivity{
         bt11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Jogador.setText(jogoDaVelha.realizarJogada(0,0));
+                Ganhador.setText(jogoDaVelha.VerificarVencedor());
 
+                
             }
         });
     }
