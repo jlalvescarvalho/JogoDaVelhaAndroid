@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity{
                 str = jogoDaVelha.realizarJogada(0,0);
                 bt11.setText(str);
                 Jogador.setText(str);
-                Ganhador.setText(jogoDaVelha.VerificarVencedor());
+                VerificarVencedor();
             }
         });
 
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity{
                 str = jogoDaVelha.realizarJogada(0,1);
                 bt12.setText(str);
                 Jogador.setText(str);
-                Ganhador.setText(jogoDaVelha.VerificarVencedor());
+                VerificarVencedor();
             }
         });
         bt13.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity{
                 str = jogoDaVelha.realizarJogada(0,2);
                 bt13.setText(str);
                 Jogador.setText(str);
-                Ganhador.setText(jogoDaVelha.VerificarVencedor());
+                VerificarVencedor();
             }
         });
 
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity{
                 str = jogoDaVelha.realizarJogada(1,0);
                 bt21.setText(str);
                 Jogador.setText(str);
-                Ganhador.setText(jogoDaVelha.VerificarVencedor());
+                VerificarVencedor();
             }
         });
 
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity{
                 str = jogoDaVelha.realizarJogada(1,1);
                 bt22.setText(str);
                 Jogador.setText(str);
-                Ganhador.setText(jogoDaVelha.VerificarVencedor());
+                VerificarVencedor();
             }
         });
 
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity{
                 str = jogoDaVelha.realizarJogada(1,2);
                 bt23.setText(str);
                 Jogador.setText(str);
-                Ganhador.setText(jogoDaVelha.VerificarVencedor());
+                VerificarVencedor();
             }
         });
 
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity{
                 str = jogoDaVelha.realizarJogada(2,0);
                 bt31.setText(str);
                 Jogador.setText(str);
-                Ganhador.setText(jogoDaVelha.VerificarVencedor());
+                VerificarVencedor();
             }
         });
 
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity{
                 str = jogoDaVelha.realizarJogada(2,1);
                 bt32.setText(str);
                 Jogador.setText(str);
-                Ganhador.setText(jogoDaVelha.VerificarVencedor());
+                VerificarVencedor();
             }
         });
 
@@ -144,18 +144,21 @@ public class MainActivity extends AppCompatActivity{
                 str = jogoDaVelha.realizarJogada(2,2);
                 bt33.setText(str);
                 Jogador.setText(str);
-                Ganhador.setText(jogoDaVelha.VerificarVencedor());
+                VerificarVencedor();
 
             }
         });
 
-        if(Ganhador.getText().equals("Jogador X Venceu") || Ganhador.getText().equals("Jogador O Venceu") || Ganhador.getText().equals("#Deu Velha#")) {
+    }
 
+    public void VerificarVencedor(){
+        if(jogoDaVelha.VerificarVencedor() == 0 || jogoDaVelha.VerificarVencedor() == 1 || jogoDaVelha.VerificarVencedor() == 2) {
             Intent it = new Intent(MainActivity.this, Ganhador.class);
-            it.putExtra("Vencedor", Ganhador.getText().toString());
+            it.putExtra("Vencedor", jogoDaVelha.Ganhou(jogoDaVelha.VerificarVencedor()));
             startActivity(it);
         }
     }
+
 
 
 }
