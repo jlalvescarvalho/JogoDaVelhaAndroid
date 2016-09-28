@@ -16,13 +16,17 @@ public class JogoDaVelha {
     public String realizarJogada(int p1, int p2){
 
         if(Jogador.equals("X")){
-            tabuleiro[p1][p2] = "X";
-            Jogador = "O";
-            return "X";
+            if(!tabuleiro[p1][p2].equals("X") && !tabuleiro[p1][p2].equals("O")) {
+                tabuleiro[p1][p2] = "X";
+                Jogador = "O";
+                return "X";
+            }
         }else if(Jogador.equals("O")){
-            tabuleiro[p1][p2] = "O";
-            Jogador = "X";
-            return "O";
+            if(!tabuleiro[p1][p2].equals("X") && !tabuleiro[p1][p2].equals("O")) {
+                tabuleiro[p1][p2] = "O";
+                Jogador = "X";
+                return "O";
+            }
         }
         Jogadas++;
         return "#";

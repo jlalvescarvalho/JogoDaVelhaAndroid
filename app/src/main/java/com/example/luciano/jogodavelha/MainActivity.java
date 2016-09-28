@@ -66,13 +66,6 @@ public class MainActivity extends AppCompatActivity{
                 bt11.setText(str);
                 Jogador.setText(str);
                 Ganhador.setText(jogoDaVelha.VerificarVencedor());
-
-                if(Ganhador.getText().equals("Jogador X Venceu") || Ganhador.getText().equals("Jogador O Venceu") || Ganhador.getText().equals("#Deu Velha#")){
-
-                    Intent it = new Intent(MainActivity.this, Ganhador.class);
-                    it.putExtra("Vencedor", Ganhador.getText().toString());
-                    startActivity(it);
-                }
             }
         });
 
@@ -83,13 +76,6 @@ public class MainActivity extends AppCompatActivity{
                 bt12.setText(str);
                 Jogador.setText(str);
                 Ganhador.setText(jogoDaVelha.VerificarVencedor());
-
-                if(Ganhador.getText().equals("Jogador X Venceu") || Ganhador.getText().equals("Jogador O Venceu") || Ganhador.getText().equals("#Deu Velha#")){
-
-                    Intent it = new Intent(MainActivity.this, Ganhador.class);
-                    it.putExtra("Vencedor", Ganhador.getText().toString());
-                    startActivity(it);
-                }
             }
         });
         bt13.setOnClickListener(new View.OnClickListener() {
@@ -99,13 +85,6 @@ public class MainActivity extends AppCompatActivity{
                 bt13.setText(str);
                 Jogador.setText(str);
                 Ganhador.setText(jogoDaVelha.VerificarVencedor());
-
-                if(Ganhador.getText().equals("Jogador X Venceu") || Ganhador.getText().equals("Jogador O Venceu") || Ganhador.getText().equals("#Deu Velha#")){
-
-                    Intent it = new Intent(MainActivity.this, Ganhador.class);
-                    it.putExtra("Vencedor", Ganhador.getText().toString());
-                    startActivity(it);
-                }
             }
         });
 
@@ -116,13 +95,6 @@ public class MainActivity extends AppCompatActivity{
                 bt21.setText(str);
                 Jogador.setText(str);
                 Ganhador.setText(jogoDaVelha.VerificarVencedor());
-
-                if(Ganhador.getText().equals("Jogador X Venceu") || Ganhador.getText().equals("Jogador O Venceu") || Ganhador.getText().equals("#Deu Velha#")){
-
-                    Intent it = new Intent(MainActivity.this, Ganhador.class);
-                    it.putExtra("Vencedor", Ganhador.getText().toString());
-                    startActivity(it);
-                }
             }
         });
 
@@ -133,13 +105,6 @@ public class MainActivity extends AppCompatActivity{
                 bt22.setText(str);
                 Jogador.setText(str);
                 Ganhador.setText(jogoDaVelha.VerificarVencedor());
-
-                if(Ganhador.getText().equals("Jogador X Venceu") || Ganhador.getText().equals("Jogador O Venceu") || Ganhador.getText().equals("#Deu Velha#")){
-
-                    Intent it = new Intent(MainActivity.this, Ganhador.class);
-                    it.putExtra("Vencedor", Ganhador.getText().toString());
-                    startActivity(it);
-                }
             }
         });
 
@@ -150,13 +115,6 @@ public class MainActivity extends AppCompatActivity{
                 bt23.setText(str);
                 Jogador.setText(str);
                 Ganhador.setText(jogoDaVelha.VerificarVencedor());
-
-                if(Ganhador.getText().equals("Jogador X Venceu") || Ganhador.getText().equals("Jogador O Venceu") || Ganhador.getText().equals("#Deu Velha#")){
-
-                    Intent it = new Intent(MainActivity.this, Ganhador.class);
-                    it.putExtra("Vencedor", Ganhador.getText().toString());
-                    startActivity(it);
-                }
             }
         });
 
@@ -167,13 +125,6 @@ public class MainActivity extends AppCompatActivity{
                 bt31.setText(str);
                 Jogador.setText(str);
                 Ganhador.setText(jogoDaVelha.VerificarVencedor());
-
-                if(Ganhador.getText().equals("Jogador X Venceu") || Ganhador.getText().equals("Jogador O Venceu") || Ganhador.getText().equals("#Deu Velha#")){
-
-                    Intent it = new Intent(MainActivity.this, Ganhador.class);
-                    it.putExtra("Vencedor", Ganhador.getText().toString());
-                    startActivity(it);
-                }
             }
         });
 
@@ -184,13 +135,6 @@ public class MainActivity extends AppCompatActivity{
                 bt32.setText(str);
                 Jogador.setText(str);
                 Ganhador.setText(jogoDaVelha.VerificarVencedor());
-
-                if(Ganhador.getText().equals("Jogador X Venceu") || Ganhador.getText().equals("Jogador O Venceu") || Ganhador.getText().equals("#Deu Velha#")){
-
-                    Intent it = new Intent(MainActivity.this, Ganhador.class);
-                    it.putExtra("Vencedor", Ganhador.getText().toString());
-                    startActivity(it);
-                }
             }
         });
 
@@ -202,14 +146,15 @@ public class MainActivity extends AppCompatActivity{
                 Jogador.setText(str);
                 Ganhador.setText(jogoDaVelha.VerificarVencedor());
 
-                if(Ganhador.getText().equals("Jogador X Venceu") || Ganhador.getText().equals("Jogador O Venceu") || Ganhador.getText().equals("#Deu Velha#")){
-
-                    Intent it = new Intent(MainActivity.this, Ganhador.class);
-                    it.putExtra("Vencedor", Ganhador.getText().toString());
-                    startActivity(it);
-                }
             }
         });
+
+        if(Ganhador.getText().equals("Jogador X Venceu") || Ganhador.getText().equals("Jogador O Venceu") || Ganhador.getText().equals("#Deu Velha#")) {
+
+            Intent it = new Intent(MainActivity.this, Ganhador.class);
+            it.putExtra("Vencedor", Ganhador.getText().toString());
+            startActivity(it);
+        }
     }
 
 
