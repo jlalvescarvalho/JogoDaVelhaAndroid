@@ -9,16 +9,13 @@ import java.util.List;
 public class JogoDaVelha {
 
     private  String[][] tabuleiro = new String[3][3];
-    private String Jogador = " ";
+    private String Jogador = "X";
     private int Jogadas = 0;
 
 
     public String realizarJogada(int p1, int p2){
-        if(Jogadas == 0){
-            tabuleiro[p1][p2] = "X";
-            Jogador = "O";
-            return "X";
-        }else if(Jogador.equals("X")){
+
+        if(Jogador.equals("X")){
             tabuleiro[p1][p2] = "X";
             Jogador = "O";
             return "X";
