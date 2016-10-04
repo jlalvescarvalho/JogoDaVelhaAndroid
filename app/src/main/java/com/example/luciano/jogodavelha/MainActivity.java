@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 str = jogoDaVelha.realizarJogada(0,0);
                 bt11.setText(str);
-                Jogador.setText(str);
+                Jogador.setText("Jogador "+str);
                 VerificarVencedor();
             }
         });
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 str = jogoDaVelha.realizarJogada(0,1);
                 bt12.setText(str);
-                Jogador.setText(str);
+                Jogador.setText("Jogador "+str);
                 VerificarVencedor();
             }
         });
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 str = jogoDaVelha.realizarJogada(0,2);
                 bt13.setText(str);
-                Jogador.setText(str);
+                Jogador.setText("Jogador "+str);
                 VerificarVencedor();
             }
         });
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 str = jogoDaVelha.realizarJogada(1,0);
                 bt21.setText(str);
-                Jogador.setText(str);
+                Jogador.setText("Jogador "+str);
                 VerificarVencedor();
             }
         });
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 str = jogoDaVelha.realizarJogada(1,1);
                 bt22.setText(str);
-                Jogador.setText(str);
+                Jogador.setText("Jogador "+str);
                 VerificarVencedor();
             }
         });
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 str = jogoDaVelha.realizarJogada(1,2);
                 bt23.setText(str);
-                Jogador.setText(str);
+                Jogador.setText("Jogador "+str);
                 VerificarVencedor();
             }
         });
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 str = jogoDaVelha.realizarJogada(2,0);
                 bt31.setText(str);
-                Jogador.setText(str);
+                Jogador.setText("Jogador "+str);
                 VerificarVencedor();
             }
         });
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 str = jogoDaVelha.realizarJogada(2,1);
                 bt32.setText(str);
-                Jogador.setText(str);
+                Jogador.setText("Jogador "+str);
                 VerificarVencedor();
             }
         });
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 str = jogoDaVelha.realizarJogada(2,2);
                 bt33.setText(str);
-                Jogador.setText(str);
+                Jogador.setText("Jogador "+str);
                 VerificarVencedor();
 
             }

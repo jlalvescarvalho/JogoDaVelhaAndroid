@@ -56,10 +56,10 @@ public class JogoDaVelha {
         JogadasVencedoras.add(tabuleiro[0][1]+tabuleiro[1][1]+tabuleiro[2][1]);
         JogadasVencedoras.add(tabuleiro[0][2]+tabuleiro[1][2]+tabuleiro[2][2]);
         JogadasVencedoras.add(tabuleiro[0][0]+tabuleiro[1][1]+tabuleiro[2][2]);
-        JogadasVencedoras.add(tabuleiro[0][2]+tabuleiro[1][1]+tabuleiro[2][2]);
+        JogadasVencedoras.add(tabuleiro[0][2]+tabuleiro[1][1]+tabuleiro[0][2]);
 
 
-        for(int i = 0; i < tabuleiro.length; i++){
+        for(int i = 0; i < JogadasVencedoras.size(); i++){
             if(JogadasVencedoras.get(i).equals("XXX")){
                 Vencedor = 0;
             }else if(JogadasVencedoras.get(i).equals("OOO")){
