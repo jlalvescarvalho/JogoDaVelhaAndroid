@@ -9,6 +9,8 @@ public class Jogadores extends SugarRecord{
 
     private int Jogador1;
     private int Jogador2;
+    private int Velha;
+
 
     public Jogadores() {
     }
@@ -27,5 +29,13 @@ public class Jogadores extends SugarRecord{
 
     public void setJogador2(int jogador2) {
         Jogador2 = jogador2;
+    }
+
+    public int getVelha() {
+        return Velha;
+    }
+
+    public void setVelha(int velha) {
+        Velha = velha;
     }
 }

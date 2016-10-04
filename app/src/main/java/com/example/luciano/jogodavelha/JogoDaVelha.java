@@ -8,6 +8,8 @@ import java.util.List;
  */
 public class JogoDaVelha {
 
+    private Jogadores jogadores;
+
     private  String[][] tabuleiro = new String[3][3];
     private String Jogador = "X";
     private int Jogadas = 0;
@@ -71,11 +73,19 @@ public class JogoDaVelha {
 
     public String Ganhou(int n){
         if(n == 0){
-
+            jogadores.setJogador1(1);
+            jogadores = new Jogadores();
+            jogadores.save();
             return "Jogador X venceu !";
         }else if(n == 1){
+            jogadores.setJogador2(1);
+            jogadores = new Jogadores();
+            jogadores.save();
             return "Jogador O venceu !";
         }else{
+            jogadores.setVelha(1);
+            jogadores = new Jogadores();
+            jogadores.save();
             return "#Deu Velha#";
         }
     }
