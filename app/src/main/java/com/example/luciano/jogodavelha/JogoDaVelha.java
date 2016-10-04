@@ -13,7 +13,6 @@ public class JogoDaVelha {
     private int Jogadas = 0;
     private int Vencedor = -1;
 
-
     public String realizarJogada(int p1, int p2){
 
         if(Jogador.equals("X")){
@@ -72,6 +71,7 @@ public class JogoDaVelha {
 
     public String Ganhou(int n){
         if(n == 0){
+
             return "Jogador X venceu !";
         }else if(n == 1){
             return "Jogador O venceu !";
