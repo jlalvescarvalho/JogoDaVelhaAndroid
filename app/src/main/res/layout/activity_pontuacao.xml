@@ -78,4 +78,14 @@
         android:layout_alignRight="@+id/txwJog2"
         android:layout_alignEnd="@+id/txwJog2" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Bt_ResetarPontuacao"
+        android:id="@+id/btReset"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="87dp" />
+
 </RelativeLayout>

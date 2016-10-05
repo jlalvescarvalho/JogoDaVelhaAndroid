@@ -7,5 +7,6 @@
     <string name="Pontuacao_Jodador1">JogadorX : </string>
     <string name="Pontuacao_Jodador2">Jogador0 : </string>
     <string name="Pontuacao_Velha">#Velha# : </string>
+    <string name="Bt_ResetarPontuacao">Resetar Pontos</string>
 
 </resources>
