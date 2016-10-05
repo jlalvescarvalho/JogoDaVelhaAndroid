@@ -27,11 +27,6 @@ public class MainActivity extends AppCompatActivity{
     private TextView Jogador;
     private TextView Ganhador;
 
-    private String Jogador1 = "Jogador 1";
-    private String Jogador2 = "Jogador 2";
-
-    private int jogadas=0;
-
     private JogoDaVelha jogoDaVelha;
 
     private String str;
@@ -55,7 +50,6 @@ public class MainActivity extends AppCompatActivity{
         bt33 = (Button) findViewById(R.id.bt33);
 
         Jogador = (TextView) findViewById(R.id.txtJogador);
-        Jogador.setText(Jogador1);
         Ganhador = (TextView) findViewById(R.id.txtGanhador);
         jogoDaVelha = new JogoDaVelha();
 
