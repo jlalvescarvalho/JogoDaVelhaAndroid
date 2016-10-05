@@ -12,6 +12,7 @@ public class Pontuacao extends AppCompatActivity {
 
     private TextView txtviewJog1;
     private TextView txtviewJog2;
+    private TextView txtviewVelha;
 
     private int pontuacaoX = 0;
     private int pontuacaoO = 0;
@@ -26,6 +27,7 @@ public class Pontuacao extends AppCompatActivity {
 
         txtviewJog1 = (TextView) findViewById(R.id.txwJog1);
         txtviewJog2 = (TextView) findViewById(R.id.txwJog2);
+        txtviewVelha = (TextView) findViewById(R.id.txtVelha);
 
         list = new ArrayList<Jogadores>();
 
@@ -44,6 +46,7 @@ public class Pontuacao extends AppCompatActivity {
 
         txtviewJog1.setText(" "+pontuacaoX);
         txtviewJog2.setText(" "+pontuacaoO);
+        txtviewVelha.setText(" "+pontuacaoVelha);
 
     }
 }
