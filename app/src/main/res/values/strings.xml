@@ -6,5 +6,6 @@
     <string name="Pontuacao">Pontuação</string>
     <string name="Pontuacao_Jodador1">Jogador1 : </string>
     <string name="Pontuacao_Jodador2">Jogador2 : </string>
+    <string name="Pontuacao_Velha">Velha : </string>
 
 </resources>

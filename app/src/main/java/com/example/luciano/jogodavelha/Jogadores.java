@@ -15,6 +15,12 @@ public class Jogadores extends SugarRecord{
     public Jogadores() {
     }
 
+    public Jogadores(int jogador1, int jogador2, int velha) {
+        Jogador1 = jogador1;
+        Jogador2 = jogador2;
+        Velha = velha;
+    }
+
     public int getJogador1() {
         return Jogador1;
     }

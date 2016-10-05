@@ -73,20 +73,34 @@ public class JogoDaVelha {
 
     public String Ganhou(int n){
         if(n == 0){
-            jogadores.setJogador1(1);
-            jogadores = new Jogadores();
-            jogadores.save();
+            Save_Update(n);
             return "Jogador X venceu !";
         }else if(n == 1){
-            jogadores.setJogador2(1);
-            jogadores = new Jogadores();
-            jogadores.save();
+            Save_Update(n);
             return "Jogador O venceu !";
         }else{
-            jogadores.setVelha(1);
-            jogadores = new Jogadores();
-            jogadores.save();
+            Save_Update(n);
             return "#Deu Velha#";
+        }
+    }
+
+    public void Save_Update(int venc){
+
+        if(venc == 0){
+            int i = 1;
+            jogadores = new Jogadores(i,0,0);
+            jogadores.save();
+            i++;
+        }else if(venc == 1){
+            int i = 1;
+            jogadores = new Jogadores(0,i,0);
+            jogadores.save();
+            i++;
+        }else{
+            int i = 1;
+            jogadores = new Jogadores(0,0,i);
+            jogadores.save();
+            i++;
         }
     }
 

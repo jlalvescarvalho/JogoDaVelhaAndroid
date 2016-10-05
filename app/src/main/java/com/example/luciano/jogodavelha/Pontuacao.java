@@ -2,29 +2,48 @@ package com.example.luciano.jogodavelha;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class Pontuacao extends AppCompatActivity {
 
-    private TextView Jogador1;
-    private TextView Jogador2;
+    private TextView txtviewJog1;
+    private TextView txtviewJog2;
 
-    private int pontuacao1;
-    private int pontuacao2;
+    private int pontuacaoX = 0;
+    private int pontuacaoO = 0;
+    private int pontuacaoVelha = 0;
+
+    private List<Jogadores> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pontuacao);
 
-        Jogador1 = (TextView) findViewById(R.id.txwJog1);
-        Jogador2 = (TextView) findViewById(R.id.txwJog2);
+        txtviewJog1 = (TextView) findViewById(R.id.txwJog1);
+        txtviewJog2 = (TextView) findViewById(R.id.txwJog2);
 
-        pontuacao1 = getIntent().getExtras().getInt("Vencedor1");
-        pontuacao2 = getIntent().getExtras().getInt("Vencedor2");
+        list = new ArrayList<Jogadores>();
 
-        Jogador1.setText(""+pontuacao1);
-        Jogador2.setText(""+pontuacao2);
+        Iterator<Jogadores> jogadoresIterator = Jogadores.findAll(Jogadores.class);
+
+        while (jogadoresIterator.hasNext()){
+            Jogadores jogador = jogadoresIterator.next();
+            list.add(jogador);
+        }
+
+        for (int i=0; i < list.size(); i++){
+            pontuacaoX += list.get(i).getJogador1();
+            pontuacaoO += list.get(i).getJogador2();
+            pontuacaoVelha += list.get(i).getVelha();
+        }
+
+        txtviewJog1.setText(" "+pontuacaoX);
+        txtviewJog2.setText(" "+pontuacaoO);
+
     }
 }
