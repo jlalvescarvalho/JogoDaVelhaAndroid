@@ -45,7 +45,7 @@ public class JogoDaVelha {
         // Jogador X = 0
         // Jogador O = 1
         // Empate = 2
-        
+
         if(Jogadas == 9){
             Vencedor = 2;
         }
