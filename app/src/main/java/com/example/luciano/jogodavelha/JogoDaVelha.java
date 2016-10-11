@@ -42,7 +42,10 @@ public class JogoDaVelha {
     }
 
     public int VerificarVencedor(){
-
+        // Jogador X = 0
+        // Jogador O = 1
+        // Empate = 2
+        
         if(Jogadas == 9){
             Vencedor = 2;
         }
