@@ -31,9 +31,9 @@ public class Ganhador extends AppCompatActivity {
 
         Vencedor.setText(Venceu);
 
-        if(Venceu.equals("Jogador 1 Venceu")){
+        if(Venceu.equals("Jogador X venceu !")){
             jogador1++;
-        }else if(Venceu.equals("Jogador 2 Venceu")){
+        }else if(Venceu.equals("Jogador O venceu !")){
             jogador2++;
         }
 
@@ -55,5 +55,13 @@ public class Ganhador extends AppCompatActivity {
                 startActivity(it);
             }
         });
+    }
+
+    public String getVenceu() {
+        return Venceu;
+    }
+
+    public void setVenceu(String venceu) {
+        Venceu = venceu;
     }
 }

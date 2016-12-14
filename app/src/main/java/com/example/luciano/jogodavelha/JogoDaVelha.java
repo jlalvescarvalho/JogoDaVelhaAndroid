@@ -101,7 +101,7 @@ public class JogoDaVelha {
             i++;
         }else{
             int i = 1;
-            jogadores = new Jogadores(0,0,i);
+            jogadores = new Jogadores(0,0,i);jogadores.save();
             jogadores.save();
             i++;
         }

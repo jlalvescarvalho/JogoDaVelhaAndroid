@@ -2,6 +2,10 @@ package com.example.luciano.jogodavelha;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -108,4 +112,22 @@ public class JogoDaVelhaTest {
         assertEquals(2, jv.VerificarVencedor());
 
     }
+
+    @Test
+    public void TestaRetornoMetodoRealizarJogada(){
+
+        jv.setJogador("O");
+        assertEquals("O", jv.realizarJogada(0,0));
+    }
+
+    @Test
+    public void TestaJogarNumaPosicaoJaUsada(){
+        jv.setJogador("O");
+        jv.realizarJogada(0,0);
+        jv.setJogador("X");
+
+        assertEquals("O", jv.realizarJogada(0,0));
+    }
+
+
 }
