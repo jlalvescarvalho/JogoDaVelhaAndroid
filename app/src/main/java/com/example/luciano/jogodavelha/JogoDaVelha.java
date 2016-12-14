@@ -65,9 +65,9 @@ public class JogoDaVelha {
 
         for(int i = 0; i < JogadasVencedoras.size(); i++){
             if(JogadasVencedoras.get(i).equals("XXX")){
-                Vencedor = 0;
-            }else if(JogadasVencedoras.get(i).equals("OOO")){
                 Vencedor = 1;
+            }else if(JogadasVencedoras.get(i).equals("OOO")){
+                Vencedor = 0;
             }
         }
 
@@ -75,10 +75,10 @@ public class JogoDaVelha {
     }
 
     public String Ganhou(int n){
-        if(n == 0){
+        if(n == 1){
             Save_Update(n);
             return "Jogador X venceu !";
-        }else if(n == 1){
+        }else if(n == 0){
             Save_Update(n);
             return "Jogador O venceu !";
         }else{
@@ -89,12 +89,12 @@ public class JogoDaVelha {
 
     public void Save_Update(int venc){
 
-        if(venc == 0){
+        if(venc == 1){
             int i = 1;
             jogadores = new Jogadores(i,0,0);
             jogadores.save();
             i++;
-        }else if(venc == 1){
+        }else if(venc == 0){
             int i = 1;
             jogadores = new Jogadores(0,i,0);
             jogadores.save();
@@ -113,5 +113,13 @@ public class JogoDaVelha {
 
     public void setVencedor(int vencedor) {
         Vencedor = vencedor;
+    }
+
+    public String getJogador() {
+        return Jogador;
+    }
+
+    public void setJogador(String jogador) {
+        Jogador = jogador;
     }
 }
