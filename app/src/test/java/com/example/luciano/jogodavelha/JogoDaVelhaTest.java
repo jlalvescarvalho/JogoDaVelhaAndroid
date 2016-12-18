@@ -113,14 +113,14 @@ public class JogoDaVelhaTest {
 
     }
 
-    @Test
+    @Test//Testa o retorno do meto realizar jogada
     public void TestaRetornoMetodoRealizarJogada(){
 
         jv.setJogador("O");
         assertEquals("O", jv.realizarJogada(0,0));
     }
 
-    @Test
+    @Test//Testa jogar uma posição ja usada
     public void TestaJogarNumaPosicaoJaUsada(){
         jv.setJogador("O");
         jv.realizarJogada(0,0);
